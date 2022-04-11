@@ -29,11 +29,13 @@
   display: flex;
   width: 400px;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
-.flash {
-  animation: flash 1s infinite;
+.flash.flash {
+  // animation: flash 1s infinite;
+  // background-color: black;
+  border: 3px solid white;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 .startButton {
   position: absolute;
@@ -49,21 +51,33 @@
 }
 .red {
   background-color: red;
+  &.flash {
+    background-color: rgb(255, 125, 125);
+  }
 }
 .blue {
   background-color: blue;
+  &.flash {
+    background-color: rgb(125, 125, 255);
+  }
 }
 .green {
   background-color: green;
+  &.flash {
+    background-color: rgb(125, 255, 125);
+  }
 }
 .yellow {
   background-color: yellow;
+  &.flash {
+    background-color: rgb(255, 255, 125);
+  }
 }
 
 .score {
   position: absolute;
   width: 100px;
-  height: 50px;
+  height: 100px;
   background-color: black;
   border-radius: 50%;
   line-height: 100px;
